@@ -158,10 +158,7 @@ where
         &mut self,
         handler: &mut MS::Handler,
     ) -> Result<Option<()>, MsgSetRecvError> {
-        println!("handle_next");
         if let Some((msg, replay_sender)) = self.recv().await {
-
-            println!("msg");
             match msg {
                 MessageSetItem::Sync(msg) => {
                     let replay = HandleSync::handle(handler, msg);
