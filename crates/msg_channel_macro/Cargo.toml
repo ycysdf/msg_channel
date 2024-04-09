@@ -1,7 +1,11 @@
 [package]
 name = "msg_channel_macro"
-version = "0.1.0"
+version = "0.1.0-beat.1"
 edition = "2021"
+license = "MIT"
+authors = ["ycysdf"]
+description = "message channel"
+keywords = ["message", "channel", "bus"]
 
 [lib]
 proc-macro = true
