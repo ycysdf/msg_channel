@@ -1,6 +1,6 @@
 [package]
 name = "msg_channel"
-version = "0.1.0-beat.1"
+version = "0.1.0-beat.2"
 edition = "2021"
 license = "MIT"
 authors = ["ycysdf"]
@@ -9,8 +9,8 @@ description = "message channel"
 keywords = ["message", "channel", "bus"]
 
 [dependencies]
-msg_channel_core = { path = "crates/msg_channel_core", version = "0.1.0-beat.1" }
-msg_channel_macro = { path = "crates/msg_channel_macro", version = "0.1.0-beat.1" }
+msg_channel_core = { path = "crates/msg_channel_core", version = "0.1.0-beat.2" }
+msg_channel_macro = { path = "crates/msg_channel_macro", version = "0.1.0-beat.2" }
 paste = "1"
 
 [dev-dependencies]

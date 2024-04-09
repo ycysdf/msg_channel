@@ -1,6 +1,6 @@
 [package]
 name = "msg_channel_core"
-version = "0.1.0-beat.1"
+version = "0.1.0-beat.2"
 edition = "2021"
 license = "MIT"
 authors = ["ycysdf"]
@@ -13,4 +13,4 @@ futures-util = "0.3"
 force-send-sync = "1"
 smallvec = "1"
 thiserror = "1"
-msg_channel_macro = { path = "../msg_channel_macro", version = "0.1.0-beat.1" }
+msg_channel_macro = { path = "../msg_channel_macro", version = "0.1.0-beat.2" }
