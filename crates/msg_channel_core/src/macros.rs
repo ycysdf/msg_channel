@@ -1,6 +1,6 @@
 #[macro_export]
 macro_rules! define_msg_variant {
-    ($set_name:ident;$handler:ident;$prefix:ident;$handler_trait:ident;$($msg:ident),*$(,)?) => {
+    ($set_name:ident;$handler:ident;$prefix:ident;$handler_trait:ident;$($msg:tt),*$(,)?) => {
         msg_channel::internal::paste! {
             pub enum [<$set_name $prefix Variant>] {
                 $($msg($msg),)*
@@ -74,7 +74,7 @@ macro_rules! define_msg_variant {
 }
 #[macro_export]
 macro_rules! impl_msg_handle_for_variant {
-    ($name:ident;$handler:ident;$prefix:ident;$handler_trait:ident;$($msg:ident),*$(,)?) => {
+    ($name:ident;$handler:ident;$prefix:ident;$handler_trait:ident;$($msg:tt),*$(,)?) => {
         msg_channel::internal::define_msg_variant!($name;$handler;$prefix;$handler_trait;$($msg),*);
         msg_channel::internal::paste! {
             impl $handler_trait<[<$name $prefix Variant>]> for $handler {
@@ -97,7 +97,7 @@ macro_rules! impl_msg_handle_for_variant {
 }
 #[macro_export]
 macro_rules! impl_sync_msg_handle_for_variant {
-    ($name:ident;$handler:ident;$prefix:ident;$handler_trait:ident;$($msg:ident),*$(,)?) => {
+    ($name:ident;$handler:ident;$prefix:ident;$handler_trait:ident;$($msg:tt),*$(,)?) => {
         msg_channel::internal::define_msg_variant!($name;$handler;$prefix;$handler_trait;$($msg),*);
         msg_channel::internal::paste! {
             impl $handler_trait<[<$name $prefix Variant>]> for $handler {
@@ -131,7 +131,7 @@ macro_rules! impl_sync_msg_handle_for_variant {
 }
 #[macro_export]
 macro_rules! impl_concurrent_msg_handle_for_variant {
-    ($name:ident;$handler:ident;$prefix:ident;$handler_trait:ident;$($msg:ident),*$(,)?) => {
+    ($name:ident;$handler:ident;$prefix:ident;$handler_trait:ident;$($msg:tt),*$(,)?) => {
         msg_channel::internal::define_msg_variant!($name;$handler;$prefix;$handler_trait;$($msg),*);
         msg_channel::internal::paste! {
             impl $handler_trait<[<$name $prefix Variant>]> for $handler {
@@ -154,7 +154,7 @@ macro_rules! impl_concurrent_msg_handle_for_variant {
 }
 #[macro_export]
 macro_rules! impl_sync_concurrent_msg_handle_for_variant {
-    ($name:ident;$handler:ident;$prefix:ident;$handler_trait:ident;$($msg:ident),*$(,)?) => {
+    ($name:ident;$handler:ident;$prefix:ident;$handler_trait:ident;$($msg:tt),*$(,)?) => {
         msg_channel::internal::define_msg_variant!($name;$handler;$prefix;$handler_trait;$($msg),*);
         msg_channel::internal::paste! {
             impl $handler_trait<[<$name $prefix Variant>]> for $handler {
