@@ -1,3 +1,7 @@
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/ycysdf/msg_channel#LICENSE)
+[![Crates.io](https://img.shields.io/crates/v/msg_channel.svg)](https://crates.io/crates/msg_channel)
+[![Docs](https://docs.rs/msg_channel/badge.svg)](https://docs.rs/msg_channel)
+
 ## Example 
 
 ```rust
