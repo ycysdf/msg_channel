@@ -1,0 +1,12 @@
+[package]
+name = "msg_channel_core"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+tokio = { version = "1", default-features = false, features = ["sync"] }
+futures-util = "0.3"
+force-send-sync = "1"
+smallvec = "1"
+thiserror = "1"
+msg_channel_macro = { path = "../msg_channel_macro" }

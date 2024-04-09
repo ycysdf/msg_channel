@@ -1,0 +1,16 @@
+[package]
+name = "msg_channel"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+msg_channel_core = { path = "crates/msg_channel_core" }
+msg_channel_macro = { path = "crates/msg_channel_macro" }
+paste = "1"
+
+[dev-dependencies]
+tokio = { version = "1.0.0", features = ["full"] }
+color-eyre = "0.6"
+
+[workspace]
+members = ["crates/*"]
